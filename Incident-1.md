@@ -63,4 +63,36 @@ At this point, the issue likely involved **network access**.
 
 * Port 80 (HTTP) was **not allowed**
 
-> The app was running perfectly… just locked inside like a VIP with no guest list.
+> The app was running perfectly… but was just locked.
+
+## Step 3: Fixed the Issue
+
+I added inbound rule:
+
+Type:  HTTP
+Port: 80
+Source: 0.0.0.0/0
+
+---
+
+## Step 4: Validation
+
+* Accessed application via browser:
+
+  ```
+  http://<public-ip>
+  ```
+  
+* Application loaded successfully
+
+---
+
+## So, what was the root cause?
+
+> Misconfigured **security group** blocked incoming HTTP traffic.
+
+---
+
+## Finally, the system was back online… but stability was still questionable.
+
+Soon after, another alert came in. That I have covered in Incident 2.
