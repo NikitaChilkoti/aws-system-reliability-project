@@ -110,4 +110,4 @@ Updated rules:
 
 ## Finally, after resolving multiple incidents, the system was finally stable.
 
-But stability is not the end goal.
+But stability is not the end goal. The system can be better. That should be covered in a new repo, right? So here is Improvements in architecture.
